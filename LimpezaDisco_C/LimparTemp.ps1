@@ -26,8 +26,8 @@ LimparPasta "C:\Windows\Temp"
 $usuarios = Get-ChildItem -Path "C:\Users" -Directory | Select-Object -ExpandProperty Name
 
 #Limpa pasta de cada uruario
-foreach($c in $usuarios){
-    $caminhoTemp ="C:\Users\$usuarios\AppData\Local\Temp"
+foreach($usuario in $usuarios){
+    $caminhoTemp ="C:\Users\$usuario\AppData\Local\Temp"
     LimparPasta $caminhoTemp
 }
 
